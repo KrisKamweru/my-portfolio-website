@@ -1,0 +1,22 @@
+<nav class="navbar is-spaced is-light" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" routerLink="/" routerLinkActive="active">KRIS</a>
+        <a class="navbar-burger" role="button" aria-label="menu" aria-expanded="false" (click) = "hamburgerClick()" [class.is-active] = "isMobileExpanded">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+    
+
+    <div class="navbar-menu" id="navbarExtendedItems" [class.is-active] = "isMobileExpanded">
+        <div class="navbar-start">
+            <a class="navbar-item" routerLink="/about" routerLinkActive="active">About Me</a>
+        </div>
+
+        <div class="navbar-end">
+            <a class="navbar-item" routerLink="/services" routerLinkActive="active">Services</a>
+            <a class="navbar-item" routerLink="/contact" routerLinkActive="active">Contacts</a>
+        </div>
+    </div>
+</nav>

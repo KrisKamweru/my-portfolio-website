@@ -1,0 +1,21 @@
+@import '../../main.scss';
+
+div.columns {
+    background-color: darken($color: $primary, $amount: 2);
+    height: 100vh;
+
+    div.column.text-column {
+        color: $color-white;
+        text-align: center;
+
+        h1{
+            text-transform: uppercase;
+        }
+    }
+    
+    // div.column.image-column img {
+    //     transform: scale(120%);
+    //     transform: translate(90px, -20px);
+    // }
+}
+
