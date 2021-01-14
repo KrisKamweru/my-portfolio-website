@@ -1,21 +1,78 @@
 @import '../../main.scss';
 
+div.bgImage {
+    margin: 0;
+    padding: 0;
+}
+
 div.columns {
-    background-color: darken($color: $primary, $amount: 2);
-    height: 100vh;
+    
+    div.column {
+        height: 600px;
+        margin: auto;
+        background-color: darken($color: $color-white, $amount: 2);
+    }
+    
+    div.column.transparent {
+        background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../../assets/Cartoon-Portrait@0.75x - new.jpg");
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
 
-    div.column.text-column {
+        height: 200px;
+
         color: $color-white;
-        text-align: center;
+    }
+}
 
-        h1{
-            text-transform: uppercase;
+
+@media(min-width: 1024px) {
+    div.bgImage {
+        height: 100vh;
+        width: 100vw;
+        background-image: url("../../assets/Cartoon-Portrait@0.75x - new.jpg");
+        background-position: center;
+        z-index: -10;
+        position: fixed;
+    
+        
+    }
+    
+    div.columns {
+        z-index: 2;
+        position: absolute;
+        width: 100vw;
+        
+        div.column {
+            position: relative;
+            align-self: center;
+        }
+        
+        div.column.transparent {
+            background-color: rgba($color: #000000, $alpha: 0.4);
+            background-image: none;
         }
     }
     
-    // div.column.image-column img {
-    //     transform: scale(120%);
-    //     transform: translate(90px, -20px);
-    // }
 }
+
+// div.columns {
+//     z-index: 2;
+//     background-color: darken($color: $primary, $amount: 2);
+//     height: 100vh;
+
+//     div.column.text-column {
+//         color: $color-white;
+//         text-align: center;
+
+//         h1{
+//             text-transform: uppercase;
+//         }
+//     }
+    
+//     // div.column.image-column img {
+//     //     transform: scale(120%);
+//     //     transform: translate(90px, -20px);
+//     // }
+// }
 

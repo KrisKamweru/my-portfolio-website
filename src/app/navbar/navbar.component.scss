@@ -4,15 +4,16 @@
     // border-bottom: 2px solid $color-black;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+    background-color: darken($color: $color-white, $amount: 2);
 }
 
 .navbar a.navbar-item {
     text-transform: uppercase;
     font-weight: bold;
     color: $color-black;
-    transition: color 0.5s ease-out;
-    transition: background-color 0.5s ease-out;
-    transition: border-bottom 0.5s ease-out;
+    transition: color 1s ease-out;
+    transition: background-color 1s ease-out;
+    transition: border-bottom 1s ease-out;
 }
 
 .navbar a.navbar-item:hover {
