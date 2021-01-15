@@ -1,4 +1,9 @@
 @import '../../main.scss';
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Vast+Shadow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Fredericka+the+Great&display=swap');
 
 div.bgImage {
     margin: 0;
@@ -6,6 +11,7 @@ div.bgImage {
 }
 
 div.columns {
+    padding-top: 80px;
     
     div.column {
         height: 600px;
@@ -22,6 +28,31 @@ div.columns {
         height: 200px;
 
         color: $color-white;
+    }
+
+    div.column.title-column {
+        text-align: center;
+        text-transform: uppercase;
+        height: auto;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        color: $color-black;
+
+        h1 {
+            // font-weight: 700;
+            font-weight: 400;
+
+            // font-family: 'Libre Barcode 39 Text', cursive;
+            // font-family: 'Vast Shadow', cursive;
+            // font-family: 'Monoton', cursive;
+            // font-family: 'Bungee Shade', cursive;
+            font-family: 'Fredericka the Great', cursive;
+            
+        }
+
+        .highlight {
+            color: $primary;
+        }
     }
 }
 
