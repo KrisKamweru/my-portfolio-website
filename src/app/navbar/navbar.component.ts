@@ -15,4 +15,8 @@ export class NavbarComponent {
   hamburgerClick() {
     this.isMobileExpanded = !this.isMobileExpanded;
   }
+
+  resetHamburger() {
+    this.isMobileExpanded = false;
+  }
 }

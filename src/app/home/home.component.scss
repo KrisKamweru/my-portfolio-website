@@ -16,16 +16,20 @@ div.columns {
     padding-top: 80px;
     color: $color-black;
     font-size: 1.25rem;
+    height: max-content;
 
     div.columns.inside-columns {
         position: inherit;
+        display: block;
         padding: 0;
+        margin: auto;
         width: inherit;
         height: inherit;
 
         div.column {
             height: max-content;
             margin: auto;
+            padding: 0;
         }
     }
     
@@ -35,7 +39,7 @@ div.columns {
         padding-left: 8%;
         padding-right: 8%;
         // padding-top: 3%;
-        padding-bottom: 3%;
+        // padding-bottom: 3%;
 
         .title {
             text-transform: uppercase;

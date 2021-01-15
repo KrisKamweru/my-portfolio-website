@@ -15,10 +15,10 @@ export class AppComponent implements OnInit{
     // window.addEventListener('scroll', this.stickyNavFunction)
   }
 
-  timeoutPoll() {
-    this.stickyNavFunction();
-    // waits(100);
-  }
+  // timeoutPoll() {
+  //   this.stickyNavFunction();
+  //   // waits(100);
+  // }
 
   stickyNavFunction() {
     let navbar = document.getElementById("page-navbar");
