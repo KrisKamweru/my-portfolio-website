@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { time } from 'console';
+// import { time } from 'console';
 
 @Component({
   selector: 'app-root',

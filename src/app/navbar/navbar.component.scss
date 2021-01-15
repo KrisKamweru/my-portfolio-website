@@ -1,7 +1,7 @@
 @import "../../main.scss";
 
 .navbar {
-    // border-bottom: 2px solid $color-black;
+    border-bottom: 2px solid $color-black;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     background-color: darken($color: $color-white, $amount: 2);

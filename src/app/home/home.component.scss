@@ -1,3 +1,5 @@
+//fix issue with second card size overflowing
+
 @import '../../main.scss';
 @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Vast+Shadow&display=swap');
@@ -12,14 +14,39 @@ div.bgImage {
 
 div.columns {
     padding-top: 80px;
-    
-    div.column {
-        height: 600px;
-        margin: auto;
-        background-color: darken($color: $color-white, $amount: 2);
+    color: $color-black;
+    font-size: 1.25rem;
+
+    div.columns.inside-columns {
+        position: inherit;
+        padding: 0;
+        width: inherit;
+        height: inherit;
+
+        div.column {
+            height: max-content;
+            margin: auto;
+        }
     }
     
-    div.column.transparent {
+    div.column {
+        margin: auto;
+        background-color: darken($color: $color-white, $amount: 2);
+        padding-left: 8%;
+        padding-right: 8%;
+        // padding-top: 3%;
+        padding-bottom: 3%;
+
+        .title {
+            text-transform: uppercase;
+        }
+
+        .highlight {
+            color: $primary;
+        }
+    }
+    
+    div.column.transparent-dark {
         background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../../assets/Cartoon-Portrait@0.75x - new.jpg");
         background-position: center;
         background-size: 100%;
@@ -29,6 +56,12 @@ div.columns {
 
         color: $color-white;
     }
+
+    div.column.transparent {
+        background-color: rgba($color: #000000, $alpha: 0);
+    }
+
+    
 
     div.column.title-column {
         text-align: center;
@@ -49,11 +82,11 @@ div.columns {
             font-family: 'Fredericka the Great', cursive;
             
         }
-
-        .highlight {
-            color: $primary;
-        }
     }
+}
+
+.card-footer-link:hover {
+    color: $primary;
 }
 
 
@@ -71,7 +104,7 @@ div.columns {
     
     div.columns {
         z-index: 2;
-        position: absolute;
+        position: relative;
         width: 100vw;
         
         div.column {
@@ -79,7 +112,7 @@ div.columns {
             align-self: center;
         }
         
-        div.column.transparent {
+        div.column.transparent-dark {
             background-color: rgba($color: #000000, $alpha: 0.4);
             background-image: none;
         }
