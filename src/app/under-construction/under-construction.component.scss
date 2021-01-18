@@ -1,0 +1,24 @@
+.container {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: auto;
+    max-width: 100%;
+
+    .fillSpace {
+        width: 100%;
+        height: 45vh;
+    }
+
+    .content {
+        background-color: #fef4a3;
+        border-radius: 5px;
+        margin: auto;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+}

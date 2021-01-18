@@ -1,5 +1,3 @@
-//fix issue with second card size overflowing
-
 @import '../../main.scss';
 @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Vast+Shadow&display=swap');
@@ -17,14 +15,12 @@ div.columns {
     color: $color-black;
     font-size: 1.25rem;
     height: max-content;
+    width: inherit;
 
     div.columns.inside-columns {
-        position: inherit;
-        display: block;
         padding: 0;
         margin: auto;
-        width: inherit;
-        height: inherit;
+        width: auto;
 
         div.column {
             height: max-content;
@@ -38,8 +34,8 @@ div.columns {
         background-color: darken($color: $color-white, $amount: 2);
         padding-left: 8%;
         padding-right: 8%;
-        // padding-top: 3%;
-        // padding-bottom: 3%;
+        padding-top: 5%;
+        padding-bottom: 5%;
 
         .title {
             text-transform: uppercase;
@@ -56,7 +52,9 @@ div.columns {
         background-size: 100%;
         background-repeat: no-repeat;
 
-        height: 200px;
+        height: auto;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
 
         color: $color-white;
     }
@@ -70,10 +68,14 @@ div.columns {
     div.column.title-column {
         text-align: center;
         text-transform: uppercase;
-        height: auto;
-        padding-top: 4rem;
-        padding-bottom: 4rem;
+        height: 100vh;
+        padding-top: 0;
+        padding-bottom: 0;
+        // padding: 0;
         color: $color-black;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
 
         h1 {
             // font-weight: 700;
@@ -86,6 +88,14 @@ div.columns {
             font-family: 'Fredericka the Great', cursive;
             
         }
+
+        .scrollIndicator {
+            position: absolute;
+            bottom: 5%;
+            left: 50%;
+            padding-bottom: 5%;
+            // text-align: center;
+        }
     }
 }
 
@@ -93,7 +103,21 @@ div.columns {
     color: $primary;
 }
 
+@media(max-width: 1023px) {
+    .title.is-1 {
+        font-size: 2.5rem;
+    }
 
+    div.columns {
+        div.column.title-column {
+            div.scrollIndicator {
+                left: 46%;
+            }
+        }
+    }
+
+    
+}
 @media(min-width: 1024px) {
     div.bgImage {
         height: 100vh;
@@ -119,6 +143,8 @@ div.columns {
         div.column.transparent-dark {
             background-color: rgba($color: #000000, $alpha: 0.4);
             background-image: none;
+            padding-top: 100px;
+            padding-bottom: 100px;
         }
     }
     
