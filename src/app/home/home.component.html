@@ -6,14 +6,14 @@
         <div class="block"><h1 class="title is-1 typeMe"></h1></div>
         <div class="block"><h3 class="subtitle">A <span class="highlight">creative</span> offering digital solutions for the <span class="highlight">individual</span> or <span class="highlight">organization</span></h3></div>
         <div class="block">
-            <div class="scrollIndicator">
+            <div class="scrollIndicator" (click) = "scrollFunction('secondRow')">
                 <p>Scroll</p>
                 <fa-icon [icon] = "circleDownIcon"></fa-icon>
             </div>
         </div>
     </div>
 
-    <div class="column is-12 transparent-dark">
+    <div class="column is-12 transparent-dark" id="secondRow">
         <div class="columns inside-columns">
             <div class="column is-7 transparent">
                 <div class="card has-text-centered">

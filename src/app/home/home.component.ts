@@ -32,4 +32,9 @@ export class HomeComponent implements OnInit {
     .start();
   }
 
+  scrollFunction(target) {
+    let scrollTo : HTMLElement = document.getElementById(target);
+    scrollTo.scrollIntoView({behavior: "smooth"});
+  }
+
 }
