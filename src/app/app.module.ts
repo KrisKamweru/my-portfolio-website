@@ -10,6 +10,10 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import { ServicesComponent } from './services/services.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { UnderConstructionComponent } from './under-construction/under-construction.component';
+import { TabsComponent } from './tabs/tabs.component';
+import { TabComponent } from './tab/tab.component';
+import { ProfileComponent } from './profile/profile.component';
+import { ResumeComponent } from './resume/resume.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +23,11 @@ import { UnderConstructionComponent } from './under-construction/under-construct
     AboutMeComponent,
     ServicesComponent,
     ContactsComponent,
-    UnderConstructionComponent
+    UnderConstructionComponent,
+    TabsComponent,
+    TabComponent,
+    ProfileComponent,
+    ResumeComponent
   ],
   imports: [
     BrowserModule,

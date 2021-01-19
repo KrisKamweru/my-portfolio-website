@@ -1,0 +1,10 @@
+<div class="tabs is-centered is-boxed is-medium">
+    <ul>
+        <li *ngFor="let tab of tabs" (click)="selectTab(tab)" [class.is-active] = "tab.active">
+            <a>
+                {{tab.tabTitle}}
+            </a>
+        </li>
+    </ul>
+</div>
+<ng-content></ng-content>
